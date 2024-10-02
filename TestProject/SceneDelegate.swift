@@ -20,8 +20,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         
-        let viewController = ViewController()
-        window?.rootViewController = viewController
+        let viewController = HomeViewController()
+        let navigationController = UINavigationController(rootViewController: viewController)
+        window?.overrideUserInterfaceStyle = .light
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 
